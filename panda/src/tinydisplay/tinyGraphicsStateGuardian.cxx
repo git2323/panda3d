@@ -1393,8 +1393,8 @@ framebuffer_copy_to_texture(Texture *tex, int view, int z,
  */
 bool TinyGraphicsStateGuardian::
 framebuffer_copy_to_ram(Texture *tex, int view, int z,
-                        const DisplayRegion *dr,
-                        const RenderBuffer &rb) {
+                        const DisplayRegion *dr, const RenderBuffer &rb,
+                        ScreenshotRequest *request) {
   nassertr(tex != nullptr && dr != nullptr, false);
 
   int xo, yo, w, h;
